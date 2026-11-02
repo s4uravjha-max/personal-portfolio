@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saurabh Ojha - Resume</title>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap");
+
+:root {
+  --ink: #16233b;
+  --text: #3d4a60;
+  --muted: #6b7789;
+  --paper: #f3f6fb;
+  --white: #ffffff;
+  --accent: #2f6bff;
+  --accent-soft: #e4ecff;
+  --border: #d9e1ee;
+  --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radius: 10px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--paper);
+  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+}
+
+h1, h2, h3 { margin: 0 0 0.4em; color: var(--ink); line-height: 1.2; }
+p { margin: 0 0 0.8em; }
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+.bar {
+  width: min(820px, 100% - 3rem);
+  margin: 1.5rem auto 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.back { font-weight: 700; text-decoration: none; }
+.back:hover { text-decoration: underline; }
+
+.button {
+  padding: 0.6rem 1.25rem;
+  font: inherit;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--accent);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.button:hover { background: #1f55dc; border-color: #1f55dc; }
+
+.page {
+  width: min(820px, 100% - 3rem);
+  margin: 0 auto 3rem;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.page header {
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 4px solid var(--accent);
+}
+
+.page h1 { font-size: clamp(2rem, 6vw, 2.75rem); font-weight: 800; letter-spacing: -0.02em; }
+.role { color: var(--muted); font-weight: 500; margin: 0 0 0.75rem; }
+.contact { font-size: 0.95rem; margin: 0; }
+
+h2 { font-size: 1.15rem; margin-top: 1.75rem; padding-bottom: 0.25rem; border-bottom: 1px solid var(--border); }
+
+.entry { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.entry h3 { font-size: 1rem; margin: 0; }
+.when { color: var(--muted); font-size: 0.9rem; }
+
+.skills { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; margin: 0; list-style: none; }
+.skills li {
+  padding: 0.15rem 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--accent-soft);
+  border-radius: 999px;
+}
+
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+th, td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+th { color: var(--ink); background: var(--paper); font-weight: 700; }
+ul.list { margin: 0 0 0.8em; padding-left: 1.25rem; }
+ul.list li { margin-bottom: 0.3rem; }
+.job { margin: 0 0 0.4em; color: var(--ink); }
+.job span { color: var(--muted); }
+
+@media print {
+  body { background: var(--white); }
+  .bar { display: none; }
+  .page { width: 100%; margin: 0; border: 0; padding: 0; }
+}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <a class="back" href="index.html">&larr; Back to portfolio</a>
+  <button class="button" type="button" onclick="window.print()">Download / print PDF</button>
+</div>
+
+<main class="page">
+  <header>
+    <h1>Saurabh Ojha</h1>
+    <p class="role">B.Tech Student in AI &amp; Data Science Engineering | C++ | Python | Problem Solving</p>
+    <p class="contact">Gwalior, Madhya Pradesh | <a href="mailto:s4uravjha@gmail.com">s4uravjha@gmail.com</a> | <a href="https://www.linkedin.com/in/saurabh-ojha-a0456b430" target="_blank" rel="noopener">LinkedIn</a></p>
+  </header>
+
+  <h2>Profile Summary</h2>
+  <p>B.Tech student in Artificial Intelligence and Data Science Engineering at Shri Ram Institute of Information Technology (RGPV), with a 7.95 CGPA in the first semester. Comfortable with C++, Python, and MS Excel, with hands-on exposure to web development and software testing through an internship. Interested in programming, software development, and solving problems through code.</p>
+
+  <h2>Academic Credentials</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Qualification</th><th>Institution</th><th>Year / Semester</th><th>Score</th></tr></thead>
+      <tbody>
+        <tr><td>B.Tech, AI &amp; Data Science Engineering</td><td>Shri Ram Institute of Information Technology, Banmore (RGPV, Bhopal)</td><td>1st Semester</td><td>7.95 CGPA</td></tr>
+        <tr><td>12th (Science)</td><td>RK Memorial Higher Secondary School</td><td>12th</td><td>77%</td></tr>
+        <tr><td>10th (General Education)</td><td>Government Model Higher Secondary School</td><td>10th</td><td>89.4%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Technical Skills</h2>
+  <ul class="list">
+    <li><strong>Programming:</strong> C++, Python</li>
+    <li><strong>Web:</strong> HTML, CSS</li>
+    <li><strong>Tools:</strong> MS Excel</li>
+    <li><strong>Core Areas:</strong> Problem Solving, Data Structures &amp; Algorithms (basics)</li>
+  </ul>
+
+  <h2>Experience</h2>
+  <p class="job"><strong>Web Development Intern</strong> <span>| Metatag Solution | 1 month</span></p>
+  <ul class="list">
+    <li>Worked on a SaaS education platform as part of a web development internship</li>
+    <li>Identified and reported website bugs across browsers and devices, helping the development team fix issues faster</li>
+    <li>Contributed to product quality by catching functional, UI, and usability issues before launch</li>
+    <li><a href="https://metataggo.online/">https://metataggo.online/</a></li>
+  </ul>
+
+  <h2>Personal Details</h2>
+  <ul class="list">
+    <li><strong>Languages:</strong> Hindi (Fluent), English (Intermediate)</li>
+    <li><strong>Location:</strong> Gwalior, Madhya Pradesh</li>
+    <li><strong>Email:</strong> <a href="mailto:s4uravjha@gmail.com">s4uravjha@gmail.com</a></li>
+    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/saurabh-ojha-a0456b430" target="_blank" rel="noopener">linkedin.com/in/saurabh-ojha-a0456b430</a></li>
+  </ul>
+</main>
+
+</body>
+</html>

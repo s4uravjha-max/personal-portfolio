@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saurabh Ojha – Portfolio</title>
+<meta name="description" content="Saurabh Ojha, 2nd year AI & Data Science engineering student interested in web development.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light;
+  --paper:#f6f8fb; --grid:#dbe4f0; --ink:#17202e; --muted:#566377;
+  --accent:#1f4fd8; --accent-ink:#ffffff; --card:#ffffff; --line:#c5d1e2;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --paper:#10151f; --grid:#1b2433; --ink:#e8edf5; --muted:#9aa8bd;
+    --accent:#7aa2ff; --accent-ink:#0b1220; --card:#161d2a; --line:#2b3649;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --paper:#10151f; --grid:#1b2433; --ink:#e8edf5; --muted:#9aa8bd;
+  --accent:#7aa2ff; --accent-ink:#0b1220; --card:#161d2a; --line:#2b3649;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:auto}
+body{
+  margin:0; color:var(--ink); background-color:var(--paper);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size:28px 28px;
+  font-family:"Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size:1.0625rem; line-height:1.6;
+}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent); outline-offset:3px}
+.wrap{max-width:62rem; margin:0 auto; padding:0 1.5rem}
+
+header{padding:1.5rem 0}
+header .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem}
+.logo{font-weight:700; font-size:1.2rem; text-decoration:none; letter-spacing:-0.01em}
+nav{display:flex; gap:1.5rem; flex-wrap:wrap}
+nav a{text-decoration:none; color:var(--muted); padding:.25rem 0; border-bottom:2px solid transparent}
+nav a:hover{color:var(--ink); border-bottom-color:var(--accent)}
+
+.hero{padding:3.5rem 0 4.5rem}
+.hero .wrap{display:grid; grid-template-columns:minmax(0,1.5fr) minmax(0,1fr); gap:3rem; align-items:center}
+.hi{font-family:"Caveat", "Segoe Script", cursive; font-size:2rem; color:var(--accent); margin:0 0 .25rem; transform:rotate(-2deg); display:inline-block}
+h1{font-size:clamp(2.6rem, 7vw, 4.6rem); line-height:1.02; letter-spacing:-0.03em; margin:0 0 1.25rem; font-weight:700}
+.lead{font-size:1.2rem; max-width:34rem; margin:0 0 .75rem}
+.sub{color:var(--muted); max-width:34rem; margin:0 0 2rem}
+.btns{display:flex; gap:.9rem; flex-wrap:wrap}
+.btn{display:inline-block; padding:.75rem 1.4rem; border-radius:6px; text-decoration:none; font-weight:500; border:2px solid var(--accent)}
+.btn.main{background:var(--accent); color:var(--accent-ink)}
+.btn.alt{color:var(--ink); background:var(--paper)}
+.btn:hover{filter:brightness(1.08)}
+
+.id{background:var(--card); border:2px solid var(--ink); border-radius:4px; padding:1.5rem; box-shadow:6px 6px 0 var(--accent)}
+.id h2{margin:0 0 1rem; font-size:1.05rem; font-weight:700}
+.id dl{margin:0; display:grid; grid-template-columns:auto 1fr; gap:.6rem 1rem}
+.id dt{color:var(--muted)}
+.id dd{margin:0; font-weight:500}
+
+section.block{padding:3.5rem 0; border-top:2px solid var(--line); background:var(--paper)}
+section.block h2{font-size:1.9rem; letter-spacing:-0.02em; margin:0 0 1.25rem}
+.about{max-width:40rem; margin:0}
+.skills{list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:.7rem}
+.skills li{background:var(--card); border:1.5px solid var(--ink); border-radius:999px; padding:.4rem 1.1rem; font-weight:500}
+.empty{border:2px dashed var(--line); border-radius:6px; padding:2rem; background:var(--card); max-width:40rem}
+.empty p{margin:0; color:var(--muted)}
+.contact a{color:var(--accent); font-weight:500}
+
+footer{border-top:2px solid var(--line); background:var(--paper); padding:1.5rem 0 2rem; color:var(--muted); font-size:.95rem}
+
+@media (max-width:760px){
+  .hero{padding:2rem 0 3rem}
+  .hero .wrap{grid-template-columns:1fr; gap:2.5rem}
+  .id{box-shadow:4px 4px 0 var(--accent)}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Saurabh Ojha</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a class="button outline" href="resume.html">View resume</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="hi">hello, I’m</p>
+        <h1>Saurabh Ojha</h1>
+        <p class="lead">I’m a 2nd year engineering student in AI &amp; Data Science, and I like building things for the web.</p>
+        <p class="sub">I’m learning how to turn data into answers and ideas into working websites. This page is where I’ll keep what I make along the way.</p>
+        <div class="btns">
+          <a class="btn main" href="#projects">See my projects</a>
+          <a class="btn alt" href="#contact">Get in touch</a>
+        </div>
+      </div>
+
+      <aside class="id" aria-label="Quick facts">
+        <h2>Quick facts</h2>
+        <dl>
+          <dt>Studying</dt><dd>AI &amp; Data Science (AIDSE)</dd>
+          <dt>Year</dt><dd>2nd year</dd>
+          <dt>College</dt><dd>Shri Ram Institute of Information Technology, Banmore</dd>
+          <dt>Interests</dt><dd>Data science ,Web development</dd>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section class="block" id="about">
+    <div class="wrap">
+      <h2>About me</h2>
+      <p class="about">I’m Saurabh, an engineering student at Shri Ram Institute of Information Technology, Banmore. My branch is AI &amp; Data Science, and alongside my coursework I’m exploring web development. I enjoy learning by building, and I’m always looking for the next small thing to make.</p>
+    </div>
+  </section>
+
+  <section class="block" id="skills">
+    <div class="wrap">
+      <h2>What I work with</h2>
+      <ul class="skills">
+        <li>Python</li>
+        <li>C++</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>SQL</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <div class="empty">
+        <p>I'll add my projects here soon. Check back in a little while.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block contact" id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p class="about">Want to talk about a project or just say hi? Email me at <a href="mailto:your.s4uravjha@gmail.com">s4uravjha@gmail.com</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Saurabh Ojha</div>
+</footer>
+
+</body>
+</html>
